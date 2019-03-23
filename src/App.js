@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import './App.css';
 import ToDo from './components/ToDo.js';
@@ -26,7 +27,7 @@ class App extends Component {
  handleSubmit(e) {
       e.preventDefault();
       if (!this.state.newTodoDescription) { return }
-      const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
+      const newTodo = { id: [], description: this.state.newTodoDescription, isCompleted: false };
      this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
     }
 
